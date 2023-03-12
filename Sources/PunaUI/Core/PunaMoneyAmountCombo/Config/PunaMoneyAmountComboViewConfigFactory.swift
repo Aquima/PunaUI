@@ -12,24 +12,24 @@ import Foundation
 internal class PunaMoneyAmountComboViewConfigFactory {
     static func provideInternalConfig(size: PunaMoneyAmountComboSize, price: Double, discount: Int, previousPricePrice: Double?, currency: PunaMoneyAmountCurrency) -> PunaMoneyAmountComboViewConfig {
 
-        var PunaMoneyAmountDiscount: PunaMoneyAmountDiscount?
-        var PunaMoneyAmountPrevious: PunaMoneyAmount?
+        var punaMoneyAmountDiscount: PunaMoneyAmountDiscount?
+        var punaMoneyAmountPrevious: PunaMoneyAmount?
 
         if discount != 0 {
-            PunaMoneyAmountDiscount = PunaMoneyAmountDiscount(discountValue: discount, size: size == .size24 ? .size14 : .size18)
+            punaMoneyAmountDiscount = PunaMoneyAmountDiscount(discountValue: discount, size: size == .size24 ? .size14 : .size18)
         }
 
         if let previousPricePrice = previousPricePrice {
-            PunaMoneyAmountPrevious = PunaMoneyAmount(type: .previous, size: size == .size24 ? .size12 : .size16, currency: currency, decimalStyle: .normal, amount: previousPricePrice < 0 ? abs(previousPricePrice) : previousPricePrice)
+            punaMoneyAmountPrevious = PunaMoneyAmount(type: .previous, size: size == .size24 ? .size12 : .size16, currency: currency, decimalStyle: .normal, amount: previousPricePrice < 0 ? abs(previousPricePrice) : previousPricePrice)
         }
 
-        let PunaMoneyAmount = PunaMoneyAmount(type: .positive, size: size == .size24 ? .size24 : .size36, currency: currency, decimalStyle: .normal, amount: price)
+        let punaMoneyAmount = PunaMoneyAmount(type: .positive, size: size == .size24 ? .size24 : .size36, currency: currency, decimalStyle: .normal, amount: price)
 
         let config = PunaMoneyAmountComboViewConfig(
             size: size,
-            moneyAmount: PunaMoneyAmount,
-            discount: PunaMoneyAmountDiscount,
-            previous: PunaMoneyAmountPrevious)
+            moneyAmount: punaMoneyAmount,
+            discount: punaMoneyAmountDiscount,
+            previous: punaMoneyAmountPrevious)
 
         return config
     }

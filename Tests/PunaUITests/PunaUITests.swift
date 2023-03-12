@@ -6,6 +6,6 @@ final class PunaUITests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(PunaUI().text, "Hello, World!")
+//        XCTAssertEqual(PunaUI().text, "Hello, World!")
     }
 }

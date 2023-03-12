@@ -9,7 +9,7 @@ class PunaAutosuggestAbstractView: UIView, PunaAutosuggestView {
 
     @IBOutlet var view: UIView!
     @IBOutlet weak var textField: PunaTextField!
-    let list = PunaList()
+    let list = PunaUI.PunaList()
     let menu = UIView()
 
     // TODO: There is no easy way to get the height of a cell
