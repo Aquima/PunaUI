@@ -9,10 +9,10 @@ import Foundation
 
 public class PunaBundle {
     public static func bundle() -> Bundle {
-        if let path = Bundle(for: self).path(forResource: "PunaUIResources", ofType: "bundle"),
-            let bundle = Bundle(path: path) {
-            return bundle
-        }
-        return Bundle.main
+//        if let path = Bundle(for: self).path(forResource: "PunaUIResources", ofType: "bundle"),
+//            let bundle = Bundle(path: path) {
+//            return bundle
+//        }
+        return Bundle.module
     }
 }
