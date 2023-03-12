@@ -43,15 +43,15 @@ import UIKit
         @objc public static let blueML700 = UIColor(hex: "#1F4E96")!
         @objc public static let blueML800 = UIColor(hex: "#183C73")!
 
-        @objc public static let blueMP100 = UIColor(hex: "#1A479AD1")!
-        @objc public static let blueMP150 = UIColor(hex: "#26479AD1")!
-        @objc public static let blueMP200 = UIColor(hex: "#33479AD1")!
-        @objc public static let blueMP300 = UIColor(hex: "#4D479AD1")!
-        @objc public static let blueMP400 = UIColor(hex: "#66479AD1")!
-        @objc public static let blueMP500 = UIColor(hex: "#009EE3")!
-        @objc public static let blueMP600 = UIColor(hex: "#007EB5")!
-        @objc public static let blueMP700 = UIColor(hex: "#005E88")!
-        @objc public static let blueMP800 = UIColor(hex: "#004766")!
+        @objc public static let blueMP100 = UIColor(hex: "#eee9fa")!
+        @objc public static let blueMP150 = UIColor(hex: "#d4c7f3")!
+        @objc public static let blueMP200 = UIColor(hex: "#b8a2eb")!
+        @objc public static let blueMP300 = UIColor(hex: "#9c7de2")!
+        @objc public static let blueMP400 = UIColor(hex: "#8661dc")!
+        @objc public static let blueMP500 = UIColor(hex: "#7145d6")!
+        @objc public static let blueMP600 = UIColor(hex: "#693ed1")!
+        @objc public static let blueMP700 = UIColor(hex: "#5e36cc")!
+        @objc public static let blueMP800 = UIColor(hex: "#542ec6")!
 
         @objc public static let green100 = UIColor(hex: "#1A00A650")!
         @objc public static let green150 = UIColor(hex: "#2600A650")!
