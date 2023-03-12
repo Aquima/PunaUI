@@ -2,7 +2,7 @@
 //  PunaThumbnailViewConfigFactory.swift
 //  PunaUI
 //
-//  Created by Alejo Echeguia on 26/06/2020.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

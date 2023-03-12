@@ -2,7 +2,7 @@
 //  PunaMessageWithThumbnailAndActionsView.swift
 //  PunaUI
 //
-//  Created by Juan Andres Vasquez Ferrer on 19-03-21.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

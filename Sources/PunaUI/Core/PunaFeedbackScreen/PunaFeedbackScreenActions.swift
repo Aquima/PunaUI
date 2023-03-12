@@ -2,8 +2,9 @@
 //  PunaFeedbackScreenActions.swift
 //  PunaUI
 //
-//  Created by JULIAN BRUNO on 02/09/2021.
+//  Created by Raul Quispe on 23/08/2021.
 //
+
 import Foundation
 
 @objc public class PunaFeedbackScreenActions: NSObject {

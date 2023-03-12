@@ -2,7 +2,7 @@
 //  PunaTagTypeNeutral.swift
 //  PunaUI
 //
-//  Created by Samuel Sainz on 5/28/20.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

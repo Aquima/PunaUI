@@ -2,7 +2,7 @@
 //  PunaThumbnail.swift
 //  PunaUI
 //
-//  Created by Alejo Echeguia on 24/06/2020.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import UIKit

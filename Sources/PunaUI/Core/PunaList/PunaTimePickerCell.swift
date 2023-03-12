@@ -2,7 +2,7 @@
 //  PunaTimePickerCell.swift
 //  PunaUI
 //
-//  Created by Daniel Esteban Beltran Beltran on 23/07/21.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

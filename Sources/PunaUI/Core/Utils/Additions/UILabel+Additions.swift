@@ -2,7 +2,7 @@
 //  UILabel+Additions.swift
 //  PunaUI
 //
-//  Created by Nicolas Rostan Talasimov on 3/9/20.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import UIKit

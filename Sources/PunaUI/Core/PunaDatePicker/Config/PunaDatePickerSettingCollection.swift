@@ -2,7 +2,7 @@
 //  PunaDatePickerSettingCollection.swift
 //  PunaUI
 //
-//  Created by Ândriu Felipe Coelho on 09/11/20.
+//  Created by Raul Quispe on 6/15/20.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  PunaCardBodyPaddingSmall.swift
 //  PunaUI
 //
-//  Created by Federico Gabriel Nosmor on 19/11/2020.
+//  Created by Raul Quispe on 20/09/21.
 //
 
 import Foundation

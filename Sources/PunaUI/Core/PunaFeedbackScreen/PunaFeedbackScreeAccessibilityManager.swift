@@ -2,7 +2,7 @@
 //  PunaFeedbackScreeAccessibilityManager.swift
 //  PunaUI
 //
-//  Created by Gerardo Tarazona Caceres on 13/09/21.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

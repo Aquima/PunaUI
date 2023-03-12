@@ -2,7 +2,7 @@
 //  PunaProgressIndicatorSizeXSmall.swift
 //  PunaUI
 //
-//  Created by Juan Andres Vasquez Ferrer on 10-12-20.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  PunaCarousel.swift
 //  PunaUI
 //
-//  Created by Alejo Echeguia on 04/02/2021.
+//  Created by Raul Quispe on 29/03/2021.
 //
 
 import UIKit

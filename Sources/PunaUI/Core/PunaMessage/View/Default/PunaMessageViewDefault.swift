@@ -2,7 +2,7 @@
 //  PunaMessageViewDefault.swift
 //  PunaUI
 //
-//  Created by Nicolas Rostan Talasimov on 1/15/20.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  PunaTextFieldComponentProgressIndicator.swift
 //  PunaUI
 //
-//  Created by Santiago Lazzari on 14/05/2021.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import UIKit

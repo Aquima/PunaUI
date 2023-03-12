@@ -2,7 +2,7 @@
 //  Bullet.swift
 //  PunaUI
 //
-//  Created by Martin Ezequiel Becerra on 2/25/21.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

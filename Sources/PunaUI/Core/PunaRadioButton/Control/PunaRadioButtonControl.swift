@@ -2,8 +2,9 @@
 //  PunaRadioButtonControl.swift
 //  PunaUI
 //
-//  Created by Samuel Sainz on 7/2/20.
+//  Created by Raul Quispe on 1/13/20.
 //
+
 import UIKit
 /// Radio Button Control component
 class PunaRadioButtonControl: UIView {

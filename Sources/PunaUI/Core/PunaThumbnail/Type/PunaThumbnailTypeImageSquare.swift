@@ -2,7 +2,7 @@
 //  PunaThumbnailTypeImageSquare.swift
 //  PunaUI
 //
-//  Created by Alejo Echeguia on 30/06/2020.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

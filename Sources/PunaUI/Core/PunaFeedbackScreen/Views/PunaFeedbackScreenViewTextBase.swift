@@ -2,7 +2,7 @@
 //  PunaFeedbackScreenViewTextBase.swift
 //  PunaUI
 //
-//  Created by Gerardo Tarazona Caceres on 14/09/21.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

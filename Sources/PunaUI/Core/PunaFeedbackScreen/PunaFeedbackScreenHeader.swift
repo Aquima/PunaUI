@@ -2,7 +2,7 @@
 //  PunaFeedbackScreenHeader.swift
 //  PunaUI
 //
-//  Created by JULIAN BRUNO on 12/08/2021.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import UIKit

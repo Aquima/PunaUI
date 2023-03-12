@@ -2,7 +2,7 @@
 //  PunaDispatchQueueType.swift
 //  PunaUI
 //
-//  Created by Gerardo Tarazona Caceres on 28/07/21.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  PunaSliderHandleType.swift
 //  PunaUI
 //
-//  Created by Victor Chang on 29/04/2021.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

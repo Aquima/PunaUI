@@ -2,7 +2,7 @@
 //  PunaCardStyle.swift
 //  PunaUI
 //
-//  Created by Martin Victory on 13/07/2020.
+//  Created by Raul Quispe on 20/09/21.
 //
 
 import Foundation

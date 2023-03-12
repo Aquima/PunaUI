@@ -2,7 +2,7 @@
 //  PunaSliderStateFactory.swift
 //  PunaUI
 //
-//  Created by Victor Chang on 27/02/2021.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

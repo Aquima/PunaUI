@@ -2,7 +2,7 @@
 //  PunaCurrenciesTestAppDefault.swift
 //  PunaUI-PunaUIResources
 //
-//  Created by Daniel Esteban Beltran Beltran on 20/09/21.
+//  Created by Raul Quispe on 20/09/21.
 //
 
 import Foundation

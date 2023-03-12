@@ -2,7 +2,7 @@
 //  PunaCarouselTypeCardViewConfigFactory.swift
 //  PunaUI
 //
-//  Created by Robert Bevilacqua on 03/06/2021.
+//  Created by Raul Quispe on 29/03/2021.
 //
 
 import UIKit

@@ -3,8 +3,7 @@
 //  PunaProgressIndicatorViewConfig.swift
 //  PunaUI
 //
-//  Created by Juan Andres Vasquez Ferrer on 30-11-20.
-//
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

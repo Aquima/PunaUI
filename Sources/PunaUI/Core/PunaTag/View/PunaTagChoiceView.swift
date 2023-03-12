@@ -2,7 +2,7 @@
 //  PunaTagChoiceView.swift
 //  PunaUI
 //
-//  Created by Facundo Conil on 10/6/20.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

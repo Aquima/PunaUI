@@ -2,7 +2,7 @@
 //  PunaMoneyAmountCurrency.swift
 //  PunaUI
 //
-//  Created by Daniel Esteban Beltran Beltran on 24/08/21.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  PunaListCellLargeSize.swift
 //  PunaUI
 //
-//  Created by Jonathan Alonso Pinto on 5/11/20.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

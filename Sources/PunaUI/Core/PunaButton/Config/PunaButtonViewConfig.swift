@@ -2,7 +2,7 @@
 //  PunaButtonViewConfig.swift
 //  PunaUI
 //
-//  Created by LEANDRO FURYK on 22/01/2020.
+//  Created by Raul Quispe on 20/09/21.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  DefaultsLinearProgress.swift
 //  PunaUI
 //
-//  Created by Jhon Alexander Ospino Bernal on 8/09/21.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

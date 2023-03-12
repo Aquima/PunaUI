@@ -2,7 +2,7 @@
 //  PunaCellType.swift
 //  PunaUI
 //
-//  Created by Jonathan Alonso Pinto on 20/10/20.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

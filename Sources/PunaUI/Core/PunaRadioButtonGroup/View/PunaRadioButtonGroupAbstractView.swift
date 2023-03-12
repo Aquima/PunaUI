@@ -3,8 +3,7 @@
 //  PunaRadioButtonGroupAbstractView.swift
 //  PunaUI
 //
-//  Created by Gerardo Tarazona Caceres on 10/06/21.
-//
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  PunaCardWidthLinkView.swift
 //  PunaUI
 //
-//  Created by Martin Victory on 15/07/2020.
+//  Created by Raul Quispe on 20/09/21.
 //
 
 import UIKit

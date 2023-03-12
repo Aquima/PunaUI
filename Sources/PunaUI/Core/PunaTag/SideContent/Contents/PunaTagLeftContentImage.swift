@@ -2,7 +2,7 @@
 //  PunaTagLeftContentImage.swift
 //  PunaUI
 //
-//  Created by Samuel Sainz on 6/4/20.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

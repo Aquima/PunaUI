@@ -2,7 +2,7 @@
 //  PunaCarouselViewConfigFactory.swift
 //  PunaUI
 //
-//  Created by Alejo Echeguia on 05/02/2021.
+//  Created by Raul Quispe on 20/09/21.
 //
 
 import Foundation

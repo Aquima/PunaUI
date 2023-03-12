@@ -2,7 +2,7 @@
 //  PunaCarouselCompactMargin.swift
 //  PunaUI
 //
-//  Created by Robert Bevilacqua on 04/05/2021.
+//  Created by Raul Quispe on 20/09/21.
 //
 
 import Foundation

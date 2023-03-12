@@ -2,7 +2,7 @@
 //  PunaColorStrategyiOS10.swift
 //  PunaUI
 //
-//  Created by LEANDRO FURYK on 05/12/2019.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

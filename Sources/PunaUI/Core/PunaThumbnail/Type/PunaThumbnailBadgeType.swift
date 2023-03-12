@@ -2,7 +2,7 @@
 //  PunaThumbnailBadgeType.swift
 //  PunaUI
 //
-//  Created by Gerardo Tarazona Caceres on 23/08/21.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

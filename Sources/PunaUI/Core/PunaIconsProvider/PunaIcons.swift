@@ -2,7 +2,7 @@
 //  PunaIcons.swift
 //  PunaUI
 //
-//  Created by Nicolas Rostan Talasimov on 2/20/20.
+//  Created by Raul Quispe on 23/08/2021.
 //
 
 import Foundation

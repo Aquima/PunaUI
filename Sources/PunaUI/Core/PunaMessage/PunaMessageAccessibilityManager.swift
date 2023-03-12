@@ -2,7 +2,7 @@
 //  PunaMessageAccessibilityManager.swift
 //  PunaUI
 //
-//  Created by Ana Cristina Calderon Castrillon on 17/09/21.
+//  Created by Raul Quispe on 1/13/20.
 //
 
 import Foundation

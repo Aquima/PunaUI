@@ -2,7 +2,7 @@
 //  PunaCheckboxViewConfig.swift
 //  PunaUI
 //
-//  Created by Rodrigo Pintos Costa on 6/15/20.
+//  Created by Raul Quispe on 29/03/2021.
 //
 
 import Foundation
