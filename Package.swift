@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "PunaUI",
+    defaultLocalization: "en",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -19,8 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "PunaUI",
-            dependencies: ["PureLayout"],
-            resources: [.copy("Resources")]),
+            dependencies: ["PureLayout"]),
         .testTarget(
             name: "PunaUITests",
             dependencies: ["PunaUI"]),
