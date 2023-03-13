@@ -19,9 +19,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "PunaUI",
-            dependencies: [
-                "PureLayout"
-            ]),
+            dependencies: ["PureLayout"],
+            resources: [.copy("Images.xcassets")]),
         .testTarget(
             name: "PunaUITests",
             dependencies: ["PunaUI"]),
