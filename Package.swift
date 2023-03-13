@@ -20,7 +20,7 @@ let package = Package(
         .target(
             name: "PunaUI",
             dependencies: ["PureLayout"],
-            resources: [.copy("Images.xcassets")]),
+            resources: [.copy("Resources")]),
         .testTarget(
             name: "PunaUITests",
             dependencies: ["PunaUI"]),
