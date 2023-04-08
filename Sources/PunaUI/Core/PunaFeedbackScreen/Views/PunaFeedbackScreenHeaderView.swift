@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import PureLayout
+//import PureLayout
 
 class PunaFeedbackScreenHeaderView: UIView {
     private let dataHeader: PunaFeedbackScreenHeader
@@ -73,53 +73,71 @@ class PunaFeedbackScreenHeaderView: UIView {
             setupContainerViewForGradient()
             let textView = self.buildTextBox()
             self.containerTextView.addSubview(textView)
-            textView.autoPinEdge(toSuperviewEdge: .leading, withInset: innerMargin)
-            textView.autoPinEdge(toSuperviewEdge: .trailing, withInset: 0)
+//            textView.autoPinEdge(toSuperviewEdge: .leading, withInset: innerMargin)
+            textView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: innerMargin).isActive = true
+//            textView.autoPinEdge(toSuperviewEdge: .trailing, withInset: 0)
+            textView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
             setupThumbnailForGradient()
             setupContainerTextViewForGradient(thumbnail, textView)
         } else {
             if separator { buildSeparator(distanceFromTop: thumbnail.bounds.height/2) }
             self.addSubview(thumbnail)
-            thumbnail.autoAlignAxis(toSuperviewAxis: .vertical)
-            thumbnail.autoPinEdge(.top, to: .top, of: self)
+//            thumbnail.autoAlignAxis(toSuperviewAxis: .vertical)
+//            thumbnail.autoPinEdge(.top, to: .top, of: self)
+            thumbnail.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
             self.buildTextBox(viewToPin: thumbnail, withOffset: innerMargin)
         }
     }
-
     private func setupContainerViewForGradient() {
         if separator { buildSeparator(distanceFromTop: 0)}
         self.addSubview(self.containerView)
-        self.containerView.autoPinEdge(toSuperviewEdge: .top, withInset: 0)
-        self.containerView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
-        self.containerView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
-        self.containerView.autoPinEdge(toSuperviewEdge: .bottom)
+//        self.containerView.autoPinEdge(toSuperviewEdge: .top, withInset: 0)
+        self.containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+//        self.containerView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
+        self.containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin).isActive = true
+//        self.containerView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
+        self.containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: margin).isActive = true
+//        self.containerView.autoPinEdge(toSuperviewEdge: .bottom)
+        self.containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.containerView.backgroundColor = UIColor.clear
         self.containerView.addSubview(self.containerTextView)
-        self.containerTextView.autoPinEdge(toSuperviewEdge: .top)
-        self.containerTextView.autoPinEdge(toSuperviewEdge: .leading)
+//        self.containerTextView.autoPinEdge(toSuperviewEdge: .top)
+        self.containerTextView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        self.containerTextView.autoPinEdge(toSuperviewEdge: .leading)
+        self.containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
     }
 
     private func setupContainerTextViewForGradient(_ thumbnail: PunaThumbnailBadge, _ textView: UIView) {
         self.containerTextView.autoPinEdge(.trailing, to: .leading, of: thumbnail, withOffset: -innerMargin)
         self.containerTextView.autoPinEdge(toSuperviewEdge: .leading)
         if textView.bounds.height > thumbnailHeightSize {
-            textView.autoPinEdge(toSuperviewEdge: .top, withInset: innerMargin)
-            textView.autoPinEdge(toSuperviewEdge: .bottom, withInset: innerMargin)
-            self.containerTextView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 0)
-            self.containerTextView.autoPinEdge(toSuperviewEdge: .top, withInset: 0)
+//            textView.autoPinEdge(toSuperviewEdge: .top, withInset: innerMargin)
+            textView.topAnchor.constraint(equalTo: self.topAnchor, constant: innerMargin).isActive = true
+//            textView.autoPinEdge(toSuperviewEdge: .bottom, withInset: innerMargin)
+            textView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//            self.containerTextView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 0)
+            self.containerTextView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+            self.containerTextView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+//            self.containerTextView.autoPinEdge(toSuperviewEdge: .top, withInset: 0)
         } else {
-            textView.autoAlignAxis(toSuperviewAxis: .horizontal)
-            thumbnail.autoPinEdge(toSuperviewEdge: .bottom, withInset: innerMargin)
+//            textView.autoAlignAxis(toSuperviewAxis: .horizontal)
+            textView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//            thumbnail.autoPinEdge(toSuperviewEdge: .bottom, withInset: innerMargin)
+            thumbnail.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: innerMargin).isActive = true
             self.containerTextView.autoSetDimension(.height, toSize: (innerMargin * 2) + thumbnailHeightSize)
         }
     }
 
     private func setupThumbnailForGradient() {
         self.containerView.addSubview(feedbackThumbnail)
-        feedbackThumbnail.autoPinEdge(toSuperviewEdge: .top, withInset: innerMargin)
-        feedbackThumbnail.autoPinEdge(toSuperviewEdge: .trailing, withInset: innerMargin)
+//        feedbackThumbnail.autoPinEdge(toSuperviewEdge: .top, withInset: innerMargin)
+        feedbackThumbnail.topAnchor.constraint(equalTo: self.topAnchor, constant: innerMargin).isActive = true
+//        feedbackThumbnail.autoPinEdge(toSuperviewEdge: .trailing, withInset: innerMargin)
+        feedbackThumbnail.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: innerMargin).isActive = true
         feedbackThumbnail.size = .size56
-        feedbackThumbnail.autoSetDimensions(to: CGSize(width: thumbnailHeightSize, height: thumbnailHeightSize))
+//        feedbackThumbnail.autoSetDimensions(to: CGSize(width: thumbnailHeightSize, height: thumbnailHeightSize))
+        feedbackThumbnail.heightAnchor.constraint(equalToConstant: thumbnailHeightSize).isActive = true
+        feedbackThumbnail.widthAnchor.constraint(equalToConstant: thumbnailHeightSize).isActive = true
     }
 
     private func buildTextBox() -> UIView {
@@ -135,10 +153,16 @@ class PunaFeedbackScreenHeaderView: UIView {
         let feedbackText = self.dataHeader.feedbackText
         let textView = PunaFeedbackScreenTextView(screenData: feedbackText, feedbackColor: self.feedbackColor, addBottomMargin: self.separator)
         self.addSubview(textView)
-        textView.autoPinEdge(.top, to: .bottom, of: viewToPin, withOffset: withOffset)
-        textView.autoAlignAxis(toSuperviewAxis: .vertical)
-        textView.autoSetDimension(.width, toSize: UIScreen.main.bounds.width - margin * 2 - (innerMargin * 2))
-        textView.autoPinEdge(.bottom, to: .bottom, of: self)
+//        textView.autoPinEdge(.top, to: .bottom, of: viewToPin, withOffset: withOffset)
+        textView.topAnchor.constraint(equalTo: self.bottomAnchor, constant: withOffset).isActive = true
+//        textView.autoAlignAxis(toSuperviewAxis: .vertical)
+        textView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+//        textView.autoSetDimension(.width, toSize: UIScreen.main.bounds.width - margin * 2 - (innerMargin * 2))
+        textView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: UIScreen.main.bounds.width - margin * 2 - (innerMargin * 2)).isActive = true
+        textView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: UIScreen.main.bounds.width - margin * 2 - (innerMargin * 2)).isActive = true
+        textView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+
+//        textView.autoPinEdge(.bottom, to: .bottom, of: self)
         textView.setNeedsLayout()
         textView.layoutIfNeeded()
     }
@@ -148,10 +172,14 @@ class PunaFeedbackScreenHeaderView: UIView {
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.backgroundColor = UIColor.Puna.white
         self.addSubview(separatorView)
-        separatorView.autoPinEdge(.top, to: .top, of: self, withOffset: distanceFromTop)
-        separatorView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
-        separatorView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
-        separatorView.autoPinEdge(toSuperviewEdge: .bottom)
+//        separatorView.autoPinEdge(.top, to: .top, of: self, withOffset: distanceFromTop)
+        separatorView.topAnchor.constraint(equalTo: self.topAnchor, constant: distanceFromTop).isActive = true
+//        separatorView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
+        separatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin).isActive = true
+//        separatorView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
+        separatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: margin).isActive = true
+//        separatorView.autoPinEdge(toSuperviewEdge: .bottom)
+        separatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         separatorView.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
         separatorView.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
         separatorView.layer.shadowOpacity = 1

@@ -5,7 +5,6 @@
 //  Created by Raul Quispe on 23/08/2021.
 //
 import UIKit
-import PureLayout
 
 class PunaFeedbackScreenButtonContainerView: UIView {
     private let actionButtonText: String
@@ -47,12 +46,21 @@ class PunaFeedbackScreenButtonContainerView: UIView {
     private func setupViews() {
         self.addSubview(self.buttonContainerView)
         self.buttonContainerView.addSubview(self.primaryButton)
-        self.primaryButton.autoPinEdge(toSuperviewEdge: .top)
-        self.primaryButton.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
-        self.primaryButton.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
-        self.primaryButton.autoPinEdge(toSuperviewEdge: .bottom, withInset: margin)
-        self.primaryButton.autoSetDimension(.height, toSize: 48)
-        self.buttonContainerView.autoPinEdgesToSuperviewEdges()
+//        self.primaryButton.autoPinEdge(toSuperviewEdge: .top)
+        self.primaryButton.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        self.primaryButton.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
+        self.primaryButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin).isActive = true
+//        self.primaryButton.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
+        self.primaryButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: margin).isActive = true
+//        self.primaryButton.autoPinEdge(toSuperviewEdge: .bottom, withInset: margin)
+        self.primaryButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: margin).isActive = true
+//        self.primaryButton.autoSetDimension(.height, toSize: 48)
+        self.primaryButton.heightAnchor.constraint(equalTo: self.heightAnchor, constant: 48).isActive = true
+//        self.buttonContainerView.autoPinEdgesToSuperviewEdges()
+        self.buttonContainerView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.buttonContainerView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        self.buttonContainerView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.buttonContainerView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 
 }

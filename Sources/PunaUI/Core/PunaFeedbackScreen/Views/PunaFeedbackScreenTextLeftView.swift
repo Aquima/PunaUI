@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import PureLayout
+//import PureLayout
 
 class PunaFeedbackScreenTextLeftView: UIView, PunaFeedbackScreenViewTextBase {
     let feedbackText: PunaFeedbackScreenText
@@ -70,7 +70,8 @@ class PunaFeedbackScreenTextLeftView: UIView, PunaFeedbackScreenViewTextBase {
     private func setupOverlineText(_ overlineText: String) {
         setupBaseOverlineLabel(overlineText: overlineText)
         overlineLabel.textAlignment = .left
-        overlineLabel.autoSetDimension(.height, toSize: overlineLabel.sizeToFitHeightCGFloat())
+//        overlineLabel.autoSetDimension(.height, toSize: overlineLabel.sizeToFitHeightCGFloat())
+        overlineLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: overlineLabel.sizeToFitHeightCGFloat()).isActive = true
     }
 
     fileprivate func setupTitleLabel(_ stackViewWidth: CGFloat) {
@@ -117,10 +118,14 @@ class PunaFeedbackScreenTextLeftView: UIView, PunaFeedbackScreenViewTextBase {
         }
 
         self.addSubview(stackView)
-        stackView.autoPinEdge(toSuperviewEdge: .top)
-        stackView.autoPinEdge(toSuperviewEdge: .bottom)
-        stackView.autoPinEdge(toSuperviewEdge: .leading)
-        stackView.autoPinEdge(toSuperviewEdge: .trailing)
+//        stackView.autoPinEdge(toSuperviewEdge: .top)
+        stackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        stackView.autoPinEdge(toSuperviewEdge: .bottom)
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//        stackView.autoPinEdge(toSuperviewEdge: .leading)
+        stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//        stackView.autoPinEdge(toSuperviewEdge: .trailing)
+        stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
 }
 

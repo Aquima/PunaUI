@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import PureLayout
 
 class PunaFeedbackContentView: UIView {
     private let data: PunaFeedbackScreenData
@@ -40,16 +39,24 @@ class PunaFeedbackContentView: UIView {
             inset = 56.0
         }
         self.addSubview(self.headerView)
-        self.headerView.autoPinEdge(toSuperviewEdge: .top, withInset: inset)
-        self.headerView.autoPinEdge(toSuperviewEdge: .leading)
-        self.headerView.autoPinEdge(toSuperviewEdge: .trailing)
+        
+        self.headerView.topAnchor.constraint(equalTo: self.topAnchor, constant: inset).isActive = true
+        self.headerView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.headerView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+//        self.headerView.autoPinEdge(toSuperviewEdge: .top, withInset: inset)
+//        self.headerView.autoPinEdge(toSuperviewEdge: .leading)
+//        self.headerView.autoPinEdge(toSuperviewEdge: .trailing)
         if let body = self.data.body {
             let bodyView = body.aditionalView
             self.addSubview(bodyView)
-            bodyView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
-            bodyView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
-            bodyView.autoPinEdge(toSuperviewEdge: .bottom)
-            bodyView.autoPinEdge(.top, to: .bottom, of: self.headerView, withOffset: innerMargin)
+            bodyView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin).isActive = true
+//            bodyView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
+            bodyView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: margin).isActive = true
+//            bodyView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
+            bodyView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//            bodyView.autoPinEdge(toSuperviewEdge: .bottom)
+            bodyView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor, constant: innerMargin).isActive = true
+//            bodyView.autoPinEdge(.top, to: .bottom, of: self.headerView, withOffset: innerMargin)
             bodyView.clipsToBounds = false
             bodyView.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
             bodyView.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)

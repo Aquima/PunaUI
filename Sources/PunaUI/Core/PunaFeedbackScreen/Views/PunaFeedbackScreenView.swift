@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import PureLayout
+//import PureLayout
 
 enum PunaFeedbackScreenModeView {
     case center
@@ -127,25 +127,36 @@ enum PunaFeedbackScreenModeView {
 
     private func setupViewsTop() {
         self.addSubview(self.contentView)
-        self.contentView.autoPinEdge(toSuperviewEdge: .top)
-        self.contentView.autoPinEdge(toSuperviewEdge: .leading)
-        self.contentView.autoPinEdge(toSuperviewEdge: .trailing)
+//        self.contentView.autoPinEdge(toSuperviewEdge: .top)
+        self.contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        self.contentView.autoPinEdge(toSuperviewEdge: .leading)
+        self.contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//        self.contentView.autoPinEdge(toSuperviewEdge: .trailing)
+        self.contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.contentView.backgroundColor = UIColor.clear
         let content = PunaFeedbackContentView(data: self.data)
         self.contentView.addSubview(content)
 
-        content.autoPinEdge(toSuperviewEdge: .top)
-        content.autoPinEdge(toSuperviewEdge: .leading)
-        content.autoPinEdge(toSuperviewEdge: .trailing)
+//        content.autoPinEdge(toSuperviewEdge: .top)
+        content.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+//        content.autoPinEdge(toSuperviewEdge: .leading)
+        content.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+//        content.autoPinEdge(toSuperviewEdge: .trailing)
+        content.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
 
         if let bottomView = self.bottomView {
             self.addSubview(bottomView)
-            self.contentView.autoPinEdge(.bottom, to: .top, of: bottomView, withOffset: -innerMargin)
-            bottomView.autoPinEdge(toSuperviewEdge: .bottom)
-            bottomView.autoPinEdge(toSuperviewEdge: .leading)
-            bottomView.autoPinEdge(toSuperviewEdge: .trailing)
+//            self.contentView.autoPinEdge(.bottom, to: .top, of: bottomView, withOffset: -innerMargin)
+            self.contentView.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -innerMargin).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .bottom)
+            bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .leading)
+            bottomView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .trailing)
+            bottomView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         } else {
-            self.contentView.autoPinEdge(toSuperviewEdge: .bottom)
+//            self.contentView.autoPinEdge(toSuperviewEdge: .bottom)
+            self.contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         }
         if self.actions.closeButtonCallback != nil {setupClose(addToView: self.contentView, insetTop: 0)}
     }
@@ -153,22 +164,33 @@ enum PunaFeedbackScreenModeView {
     private func setupViewsCenter() {
 
         self.addSubview(self.contentView)
-        self.contentView.autoPinEdge(toSuperviewEdge: .top, withInset: topMargin)
-        self.contentView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
-        self.contentView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
+//        self.contentView.autoPinEdge(toSuperviewEdge: .top, withInset: topMargin)
+        self.contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: topMargin).isActive = true
+//        self.contentView.autoPinEdge(toSuperviewEdge: .leading, withInset: margin)
+        self.contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin).isActive = true
+//        self.contentView.autoPinEdge(toSuperviewEdge: .trailing, withInset: margin)
+        self.contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: margin).isActive = true
         self.contentView.backgroundColor =  UIColor.clear // UIColor.red
         let content = PunaFeedbackContentView(data: self.data)
         self.contentView.addSubview(content)
-        content.autoSetDimension(.width, toSize: UIScreen.main.bounds.width - margin * 2 - (innerMargin * 2) )
-        content.autoCenterInSuperview()
+//        content.autoSetDimension(.width, toSize: UIScreen.main.bounds.width - margin * 2 - (innerMargin * 2) )
+        content.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - margin * 2 - (innerMargin * 2)).isActive = true
+//        content.autoCenterInSuperview()
+        content.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        content.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         if let bottomView = self.bottomView {
             self.addSubview(bottomView)
             self.contentView.autoPinEdge(.bottom, to: .top, of: bottomView, withOffset: -innerMargin)
-            bottomView.autoPinEdge(toSuperviewEdge: .bottom)
-            bottomView.autoPinEdge(toSuperviewEdge: .leading)
-            bottomView.autoPinEdge(toSuperviewEdge: .trailing)
+//            bottomView.autoPinEdge(toSuperviewEdge: .bottom)
+            bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .leading)
+            bottomView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .trailing)
+            bottomView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+            
         } else {
-            self.contentView.autoPinEdge(toSuperviewEdge: .bottom)
+//            self.contentView.autoPinEdge(toSuperviewEdge: .bottom)
+            self.contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         }
         if self.actions.closeButtonCallback != nil {setupClose(addToView: self.contentView, insetTop: -margin, insetTrailing: -margin )}
     }
@@ -180,22 +202,36 @@ enum PunaFeedbackScreenModeView {
         self.containerStackView.backgroundColor = insetScroll == 0 ? UIColor.Puna.graySolid070 : UIColor.Puna.white
         self.backScrollView.backgroundColor = containerStackView.backgroundColor
         self.backScrollView.addSubview(self.containerStackView)
-        self.containerStackView.autoSetDimension(.width, toSize: UIScreen.main.bounds.width)
-        self.containerStackView.autoPinEdge(toSuperviewEdge: .top, withInset: insetScroll)
-        self.containerStackView.autoPinEdge(.leading, to: .leading, of: self.backScrollView)
-        self.containerStackView.autoPinEdge(.trailing, to: .trailing, of: self.backScrollView)
-        self.backScrollView.autoPinEdgesToSuperviewEdges()
+//        self.containerStackView.autoSetDimension(.width, toSize: UIScreen.main.bounds.width)
+        self.containerStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+//        self.containerStackView.autoPinEdge(toSuperviewEdge: .top, withInset: insetScroll)
+        self.containerStackView.topAnchor.constraint(equalTo: self.topAnchor,constant: insetScroll).isActive = true
+//        self.containerStackView.autoPinEdge(.leading, to: .leading, of: self.backScrollView)
+        self.containerStackView.leadingAnchor.constraint(equalTo: self.backScrollView.leadingAnchor).isActive = true
+//        self.containerStackView.autoPinEdge(.trailing, to: .trailing, of: self.backScrollView)
+        self.containerStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+//        self.backScrollView.autoPinEdgesToSuperviewEdges()
+        self.backScrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.backScrollView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.backScrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.backScrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        
         self.backScrollView.autoMatch(.width, to: .width, of: self) // this is important for scrolling
         self.backScrollView.delegate = self
         if let bottomView = self.bottomView {
             self.containerStackView.addArrangedSubview(separatorView16)
             self.backScrollView.addSubview(bottomView)
-            self.containerStackView.autoPinEdge(.bottom, to: .top, of: bottomView)
-            bottomView.autoPinEdge(toSuperviewEdge: .leading)
-            bottomView.autoPinEdge(toSuperviewEdge: .trailing)
-            bottomView.autoPinEdge(toSuperviewEdge: .bottom)
+//            self.containerStackView.autoPinEdge(.bottom, to: .top, of: bottomView)
+            self.containerStackView.bottomAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .leading)
+            bottomView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .trailing)
+            bottomView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+//            bottomView.autoPinEdge(toSuperviewEdge: .bottom)
+            bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         } else {
-            self.containerStackView.autoPinEdge(toSuperviewEdge: .bottom)
+//            self.containerStackView.autoPinEdge(toSuperviewEdge: .bottom)
+            self.containerStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         }
         if self.actions.closeButtonCallback != nil {setupClose(addToView: self.backScrollView, insetTop: 0)}
     }
@@ -217,8 +253,10 @@ enum PunaFeedbackScreenModeView {
             closeIconimageView.autoCenterInSuperview()
         }
         addToView.addSubview(closeButtonContainer)
-        closeButtonContainer.autoPinEdge(toSuperviewEdge: .top, withInset: insetTop)
-        closeButtonContainer.autoPinEdge(toSuperviewEdge: .trailing, withInset: insetTrailing)
+//        closeButtonContainer.autoPinEdge(toSuperviewEdge: .top, withInset: insetTop)
+        closeButtonContainer.topAnchor.constraint(equalTo: self.topAnchor, constant: insetTop).isActive = true
+//        closeButtonContainer.autoPinEdge(toSuperviewEdge: .trailing, withInset: insetTrailing)
+        closeButtonContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: insetTrailing).isActive = true
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapMain))
         closeButtonContainer.addGestureRecognizer(tap)
         closeButtonContainer.layer.zPosition = 0

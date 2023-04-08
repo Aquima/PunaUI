@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import PureLayout
+//import PureLayout
 
 class PunaFeedbackScreenTextView: UIView, PunaFeedbackScreenViewTextBase {
     let feedbackText: PunaFeedbackScreenText
@@ -74,10 +74,14 @@ class PunaFeedbackScreenTextView: UIView, PunaFeedbackScreenViewTextBase {
             stackView.addArrangedSubview(self.separatorView16)
         }
         self.addSubview(stackView)
-        stackView.autoPinEdge(toSuperviewEdge: .top)
-        stackView.autoPinEdge(toSuperviewEdge: .bottom)
-        stackView.autoPinEdge(toSuperviewEdge: .leading)
-        stackView.autoPinEdge(toSuperviewEdge: .trailing)
+//        stackView.autoPinEdge(toSuperviewEdge: .top)
+        stackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        stackView.autoPinEdge(toSuperviewEdge: .bottom)
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//        stackView.autoPinEdge(toSuperviewEdge: .leading)
+        stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//        stackView.autoPinEdge(toSuperviewEdge: .trailing)
+        stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
 
     private func setupTitleLabel() -> UILabel {
@@ -86,7 +90,8 @@ class PunaFeedbackScreenTextView: UIView, PunaFeedbackScreenViewTextBase {
         titleLabel.setPunaStyle(style: fontStyleTitle, lineHeight: 30)
         titleLabel.textAlignment = .center
         titleLabel.preferredMaxLayoutWidth = cardTextWidth
-        titleLabel.autoSetDimension(.height, toSize: titleLabel.sizeToFitHeightCGFloat())
+//        titleLabel.autoSetDimension(.height, toSize: titleLabel.sizeToFitHeightCGFloat())
+        titleLabel.heightAnchor.constraint(equalToConstant: titleLabel.sizeToFitHeightCGFloat()).isActive = true
         return titleLabel
     }
 

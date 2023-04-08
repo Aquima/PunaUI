@@ -7,14 +7,15 @@
 
 import Foundation
 import UIKit
-import PureLayout
+//import PureLayout
 
 class ViewUtils {
     public static func buildSeparatorView(toSize: CGFloat, color: UIColor = UIColor.white) -> UIView {
         let emptyView = UIView()
         emptyView.translatesAutoresizingMaskIntoConstraints = false
         emptyView.backgroundColor = color
-        emptyView.autoSetDimension(.height, toSize: toSize)
+//        emptyView.autoSetDimension(.height, toSize: toSize)
+        emptyView.heightAnchor.constraint(equalToConstant: toSize).isActive = true
         return emptyView
     }
 }
