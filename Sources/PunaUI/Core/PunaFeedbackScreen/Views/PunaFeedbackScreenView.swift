@@ -98,7 +98,8 @@ enum PunaFeedbackScreenModeView {
         }
 
         feedbackContentView = PunaFeedbackContentView(data: self.data)
-        feedbackContentView.autoSetDimension(.width, toSize: UIScreen.main.bounds.width)
+//        feedbackContentView.autoSetDimension(.width, toSize: UIScreen.main.bounds.width)
+        feedbackContentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
         feedbackContentView.setNeedsLayout()
         feedbackContentView.layoutIfNeeded()
 
@@ -180,7 +181,8 @@ enum PunaFeedbackScreenModeView {
         content.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         if let bottomView = self.bottomView {
             self.addSubview(bottomView)
-            self.contentView.autoPinEdge(.bottom, to: .top, of: bottomView, withOffset: -innerMargin)
+//            self.contentView.autoPinEdge(.bottom, to: .top, of: bottomView, withOffset: -innerMargin)
+            self.contentView.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -innerMargin).isActive = true
 //            bottomView.autoPinEdge(toSuperviewEdge: .bottom)
             bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
 //            bottomView.autoPinEdge(toSuperviewEdge: .leading)
@@ -216,7 +218,8 @@ enum PunaFeedbackScreenModeView {
         self.backScrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.backScrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         
-        self.backScrollView.autoMatch(.width, to: .width, of: self) // this is important for scrolling
+//        self.backScrollView.autoMatch(.width, to: .width, of: self) // this is important for scrolling
+        self.backScrollView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.backScrollView.delegate = self
         if let bottomView = self.bottomView {
             self.containerStackView.addArrangedSubview(separatorView16)
@@ -240,17 +243,23 @@ enum PunaFeedbackScreenModeView {
 
         closeButtonContainer.translatesAutoresizingMaskIntoConstraints = false
         closeButtonContainer.backgroundColor = UIColor.clear
-        closeButtonContainer.autoSetDimensions(to: CGSize(width: 48, height: 48))
+//        closeButtonContainer.autoSetDimensions(to: CGSize(width: 48, height: 48))
+        closeButtonContainer.widthAnchor.constraint(equalToConstant: 48).isActive = true
+        closeButtonContainer.heightAnchor.constraint(equalToConstant: 48).isActive = true
         let closeIconimageView = UIImageView()
         closeIconimageView.translatesAutoresizingMaskIntoConstraints = false
         closeIconimageView.backgroundColor = UIColor.clear
         closeIconimageView.contentMode = .center
-        closeIconimageView.autoSetDimensions(to: CGSize(width: 48, height: 48))
+//        closeIconimageView.autoSetDimensions(to: CGSize(width: 48, height: 48))
+        closeIconimageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
+        closeIconimageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
         closeButtonContainer.addSubview(closeIconimageView)
         PunaIconsProvider.loadIcon(name: PunaIcons.close24) { (closeImage) in
             closeIconimageView.image = closeImage
             closeIconimageView.tintColor = (self.data.type == .congrats && self.data.body != nil) ? PunaStyleSheetManager.styleSheet.textColorWhite : PunaStyleSheetManager.styleSheet.textColorSecondary
-            closeIconimageView.autoCenterInSuperview()
+            closeIconimageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            closeIconimageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+//            closeIconimageView.autoCenterInSuperview()
         }
         addToView.addSubview(closeButtonContainer)
 //        closeButtonContainer.autoPinEdge(toSuperviewEdge: .top, withInset: insetTop)

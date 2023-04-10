@@ -66,7 +66,8 @@ class PunaFeedbackContentView: UIView {
             bodyView.layer.shouldRasterize = true
             bodyView.layer.rasterizationScale = UIScreen.main.scale
         } else {
-            self.headerView.autoPinEdge(toSuperviewEdge: .bottom)
+//            self.headerView.autoPinEdge(toSuperviewEdge: .bottom)
+            self.headerView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         }
         self.setNeedsLayout()
         self.layoutIfNeeded()

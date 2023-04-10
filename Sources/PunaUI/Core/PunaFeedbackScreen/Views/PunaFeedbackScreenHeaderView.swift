@@ -108,8 +108,10 @@ class PunaFeedbackScreenHeaderView: UIView {
     }
 
     private func setupContainerTextViewForGradient(_ thumbnail: PunaThumbnailBadge, _ textView: UIView) {
-        self.containerTextView.autoPinEdge(.trailing, to: .leading, of: thumbnail, withOffset: -innerMargin)
-        self.containerTextView.autoPinEdge(toSuperviewEdge: .leading)
+//        self.containerTextView.autoPinEdge(.trailing, to: .leading, of: thumbnail, withOffset: -innerMargin)
+        self.containerTextView.trailingAnchor.constraint(equalTo: thumbnail.leadingAnchor, constant:  -innerMargin).isActive = true
+//        self.containerTextView.autoPinEdge(toSuperviewEdge: .leading)
+        self.containerTextView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         if textView.bounds.height > thumbnailHeightSize {
 //            textView.autoPinEdge(toSuperviewEdge: .top, withInset: innerMargin)
             textView.topAnchor.constraint(equalTo: self.topAnchor, constant: innerMargin).isActive = true
@@ -124,7 +126,8 @@ class PunaFeedbackScreenHeaderView: UIView {
             textView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 //            thumbnail.autoPinEdge(toSuperviewEdge: .bottom, withInset: innerMargin)
             thumbnail.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: innerMargin).isActive = true
-            self.containerTextView.autoSetDimension(.height, toSize: (innerMargin * 2) + thumbnailHeightSize)
+//            self.containerTextView.autoSetDimension(.height, toSize: (innerMargin * 2) + thumbnailHeightSize)
+            thumbnail.heightAnchor.constraint(equalToConstant:  (innerMargin * 2) + thumbnailHeightSize).isActive = true
         }
     }
 

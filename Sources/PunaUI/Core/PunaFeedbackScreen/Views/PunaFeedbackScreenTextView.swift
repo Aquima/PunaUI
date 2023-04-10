@@ -52,7 +52,8 @@ class PunaFeedbackScreenTextView: UIView, PunaFeedbackScreenViewTextBase {
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.spacing = 0
-        stackView.autoSetDimension(.width, toSize: cardTextWidth)
+//        stackView.autoSetDimension(.width, toSize: cardTextWidth)
+        stackView.widthAnchor.constraint(equalToConstant: cardTextWidth).isActive = true
         if let overlineText = self.feedbackText.overline {
             stackView.addArrangedSubview(setupOverlineLabel(overlineText: overlineText))
             let separatorView8 = ViewUtils.buildSeparatorView(toSize: 8, color: .clear)
@@ -109,7 +110,8 @@ class PunaFeedbackScreenTextView: UIView, PunaFeedbackScreenViewTextBase {
         highlightedLabel.textAlignment = .center
         highlightedLabel.preferredMaxLayoutWidth = self.cardTextWidth
         highlightedLabel.textColor = self.feedbackUIColor()
-        highlightedLabel.autoSetDimension(.height, toSize: highlightedLabel.sizeToFitHeightCGFloat())
+//        highlightedLabel.autoSetDimension(.height, toSize: highlightedLabel.sizeToFitHeightCGFloat())
+        highlightedLabel.heightAnchor.constraint(equalToConstant: highlightedLabel.sizeToFitHeightCGFloat()).isActive = true
         return highlightedLabel
     }
 
@@ -119,7 +121,8 @@ class PunaFeedbackScreenTextView: UIView, PunaFeedbackScreenViewTextBase {
         setupBaseDescriptiontext(descriptionText: descriptionText, fontStyleDescription: fontStyleDescription)
         descriptionTextView.textAlignment = .center
         let sizeThatFitsTextView = descriptionTextView.sizeThatFits(CGSize(width: cardTextWidth, height: CGFloat(MAXFLOAT)))
-        descriptionTextView.autoSetDimension(.height, toSize: sizeThatFitsTextView.height)
+//        descriptionTextView.autoSetDimension(.height, toSize: sizeThatFitsTextView.height) 
+        descriptionTextView.heightAnchor.constraint(equalToConstant: sizeThatFitsTextView.height).isActive = true
         descriptionTextView.delegate = self
         return descriptionTextView
     }

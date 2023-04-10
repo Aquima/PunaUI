@@ -91,7 +91,8 @@ class PunaFeedbackScreenTextLeftView: UIView, PunaFeedbackScreenViewTextBase {
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.spacing = 0
-        stackView.autoSetDimension(.width, toSize: stackViewWidth)
+//        stackView.autoSetDimension(.width, toSize: stackViewWidth)
+        stackView.widthAnchor.constraint(equalToConstant: stackViewWidth).isActive = true
         if let overlineText = self.feedbackText.overline {
             setupOverlineText(overlineText)
             stackView.addArrangedSubview(overlineLabel)
