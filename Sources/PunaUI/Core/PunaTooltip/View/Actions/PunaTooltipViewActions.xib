@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,14 +48,14 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="31F-6C-4Ed">
                             <rect key="frame" x="0.0" y="46.666666666666657" width="394" height="80"/>
                             <subviews>
-                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="drD-DX-R6G" customClass="PunaButton" customModule="AndesUI">
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="drD-DX-R6G" customClass="PunaButton" customModule="PunaUI">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="primaryActionButtonTapped:" destination="-1" eventType="touchUpInside" id="79N-Xp-XTT"/>
                                     </connections>
                                 </view>
-                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="HxK-jf-bpZ" customClass="PunaButton" customModule="AndesUI">
+                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="HxK-jf-bpZ" customClass="PunaButton" customModule="PunaUI">
                                     <rect key="frame" x="204" y="0.0" width="190" height="80"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
