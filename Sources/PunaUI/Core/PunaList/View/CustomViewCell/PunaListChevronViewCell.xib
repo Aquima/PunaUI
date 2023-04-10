@@ -38,7 +38,7 @@
                                             <constraint firstAttribute="height" constant="18" id="oMc-Oi-AVM"/>
                                         </constraints>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxh-3a-6wi" customClass="PunaThumbnail" customModule="AndesUI">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxh-3a-6wi" customClass="PunaThumbnail" customModule="PunaUI">
                                         <rect key="frame" x="0.0" y="18" width="0.0" height="0.0"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>

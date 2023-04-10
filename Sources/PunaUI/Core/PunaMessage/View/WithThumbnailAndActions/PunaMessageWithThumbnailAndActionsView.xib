@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -53,7 +55,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsE-hf-VPP">
                     <rect key="frame" x="16" y="16" width="48" height="48"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0l-ON-9Jm" customClass="PunaThumbnail" customModule="AndesUI">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0l-ON-9Jm" customClass="PunaThumbnail" customModule="PunaUI">
                             <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
@@ -97,7 +99,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CPr-he-XXd">
-                    <rect key="frame" x="80" y="15" width="608" height="75.333333333333329"/>
+                    <rect key="frame" x="80" y="15" width="608" height="69.666666666666671"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcW-WK-QzY">
                             <rect key="frame" x="0.0" y="0.0" width="608" height="20.333333333333332"/>
@@ -106,7 +108,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView opaque="NO" multipleTouchEnabled="YES" contentMode="left" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="body" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d73-Ie-8ZP">
-                            <rect key="frame" x="0.0" y="25.333333333333336" width="608" height="50.000000000000007"/>
+                            <rect key="frame" x="0.0" y="25.333333333333332" width="608" height="44.333333333333343"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" staticText="YES"/>
                             </accessibility>
@@ -117,21 +119,21 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3oO-mw-jzV">
-                    <rect key="frame" x="80" y="90.333333333333329" width="608" height="0.0"/>
+                    <rect key="frame" x="80" y="84.666666666666671" width="608" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="height" id="lht-Kx-oZF"/>
                     </constraints>
                 </stackView>
-                <view contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="21.5" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-CF-Oqd" customClass="PunaButton" customModule="AndesUI">
-                    <rect key="frame" x="80" y="106.33333333333333" width="50" height="15.666666666666671"/>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="21.5" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-CF-Oqd" customClass="PunaButton" customModule="PunaUI">
+                    <rect key="frame" x="80" y="100.66666666666667" width="50" height="21.333333333333329"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="PunaMessagePrimaryAction"/>
                     <connections>
                         <action selector="primaryButtonTapped:" destination="-1" eventType="touchUpInside" id="kho-RD-LfD"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" placeholderIntrinsicWidth="322" placeholderIntrinsicHeight="21.5" translatesAutoresizingMaskIntoConstraints="NO" id="UDP-xQ-Pdx" customClass="PunaButton" customModule="AndesUI">
-                    <rect key="frame" x="146" y="103.33333333333333" width="322" height="21.666666666666671"/>
+                <view contentMode="scaleToFill" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" placeholderIntrinsicWidth="322" placeholderIntrinsicHeight="21.5" translatesAutoresizingMaskIntoConstraints="NO" id="UDP-xQ-Pdx" customClass="PunaButton" customModule="PunaUI">
+                    <rect key="frame" x="146" y="100.66666666666667" width="322" height="21.333333333333329"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="PunaMessageSecondaryAction"/>
                     <connections>
