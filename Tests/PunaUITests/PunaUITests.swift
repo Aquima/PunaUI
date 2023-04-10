@@ -12,9 +12,13 @@ final class PunaUITests: XCTestCase, PunaListDelegate, PunaListDataSource {
         let list = PunaUI.PunaList()
         list.delegate = self
         list.dataSource = self
+        list.reloadData()
         XCTAssertNotNil(list)
     }
     func testPunsSimpleCell() throws {
+        let nibFile = UINib(nibName: "PunaListSimpleViewCell",
+                            bundle: PunaBundle.bundle())
+        XCTAssertNotNil(nibFile)
         let customCell = PunaSimpleCell(withTitle: "suggestion", subtitle: "asdasd")
         XCTAssertNotNil(customCell)
     }
@@ -31,3 +35,4 @@ final class PunaUITests: XCTestCase, PunaListDelegate, PunaListDataSource {
         return 1
     }
 }
+//paseo las delicias 113 madrid
