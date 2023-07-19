@@ -1,0 +1,11 @@
+ xcassets:
+   inputs:
+     - ColorPalette.xcassets
+#     - ProFeatures.xcassets
+   outputs:
+     - templateName: swift5
+       params:
+         forceProvidesNamespaces: true
+         enumName: PunaColor
+         publicAccess: public
+       output: ColorPalette.swift
